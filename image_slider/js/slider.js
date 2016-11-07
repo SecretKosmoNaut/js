@@ -5,8 +5,8 @@ count = $("#slider img").length;
 $(document).ready(function() {
 
 	$("#slider img#" + sliderInt).fadeIn(300);
-	startSlider();
 
+	startSlider();
 });
 
 function startSlider() {
@@ -26,6 +26,14 @@ function startSlider() {
 
 };
 
+function stopSlider() {
+
+	window.clearInterval(loop);
+
+};
+
+$("#slider img").hover(function() {stopSlider();}, function(){startSlider();});
+
 function prev() {
 
 	newSlide = sliderInt - 1;
@@ -40,15 +48,9 @@ function next() {
 
 };
 
-function stopLoop() {
-
-	window.clearInterval(loop);
-
-};
-
 function showSlide(id) {
 
-	stopLoop();
+	stopSlider();
 	
 	if(id > count) {
 
@@ -67,13 +69,3 @@ function showSlide(id) {
 
 	startSlider();
 };
-
-$("#slider img").hover(function() {
-
-	stopLoop();
-
-}, function(){
-
-	startSlider();
-
-});
