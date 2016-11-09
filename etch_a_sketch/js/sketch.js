@@ -1,18 +1,18 @@
 var div = '<div class="grid"></div>';
 var count;
 
-function ten() {
-	count = 100;
+function eight() {
+	count = 64;
 	grid(count);
 }
 
-function twenty() {
-	count = 400;
+function sixteen() {
+	count = 256;
 	grid(count);
 };
 
-function thirty() {
-	count = 900;
+function thirtyTwo() {
+	count = 1024;
 	grid(count);
 };
 
@@ -22,7 +22,7 @@ function grid(count) {
 		$("#screen").append(div);
 	};
 
-	var dimension = 600 / Math.sqrt(count) - 2;
+	var dimension = 800 / Math.sqrt(count) - 2;
 	$(".grid").width(dimension);
 	$(".grid").height(dimension);
 };

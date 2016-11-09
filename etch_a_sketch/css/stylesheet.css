@@ -34,7 +34,8 @@ a:hover {
 }
 
 #screen {
-	width: 600px;
+	width: 800px;
+	height: 800px;
 	margin: 0 auto;
 	background-color: #ccc;
 	font-size: 0px;
