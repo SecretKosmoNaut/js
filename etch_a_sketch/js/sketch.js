@@ -1,5 +1,6 @@
 var div = '<div class="grid"></div>';
 var count;
+var color = "#a2bfc2"
 
 function eight() {
 	count = 64;
@@ -25,7 +26,15 @@ function grid(count) {
 	var dimension = 800 / Math.sqrt(count) - 2;
 	$(".grid").width(dimension);
 	$(".grid").height(dimension);
+	draw();
 };
 
+function draw() {
+	$(".grid").hover(function() {
+		$(this).css("background-color", color);
+	});
+}
 
-// 400 / 16 - 2 would result in correct grid width and heigh for 16 x 16
+function changeColor(newColor) {
+	color = newColor;
+}
