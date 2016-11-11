@@ -38,3 +38,8 @@ function draw() {
 function changeColor(newColor) {
 	color = newColor;
 }
+
+function randomColor() {
+	color = '#'+Math.floor(Math.random()*16777215).toString(16);
+	$("a#random").css("background-color", color);
+};
